@@ -1,14 +1,14 @@
 .header
+	position: relative
 	padding: 20px 0
 	background: $green-bg
 	&__container
 		display: flex
 		justify-content: space-between
 		align-items: center
-
 	&__logo
 		+box(153px, 58px)
-	&__holder
+	&__menu
 		display: flex
 		align-items: center
 	&__login
@@ -20,3 +20,69 @@
 		margin-right: 10px
 		border-radius: 160px
 		background: $green-light-bg
+	&-burger
+		position: relative
+		z-index: 10
+		display: flex
+		flex-direction: column
+		width: 35px
+		padding: 0
+		border: none
+		outline: none
+		background-color: transparent
+		&__line
+			height: 4px
+			border-radius: 5px
+			width: 100%
+			background-color: #FBFAF7
+			transition: .3s
+			&:not(:last-child)
+				margin-bottom: 8px
+		&--desktop--hidden
+			display: none
+
+@include maxQ(590px)
+	.header
+		&__get-started-button
+			margin-right: 0
+		&__menu
+			position: absolute
+			z-index: -5
+			top: 100%
+			right: 0
+			flex-direction: column
+			padding: 10px
+			background: $green-bg
+			transition: .6s
+			transform: translateY(-100%)
+			&--active
+				transform: translateY(-0%)
+
+		&__login
+			margin-right: 0
+			margin-bottom: 20px
+		&__phone
+			margin-right: 0
+			margin-bottom: 20px
+		&__get-started-button
+			margin: 0
+
+		&-burger
+			$this: &
+			&--desktop--hidden
+				display: flex
+			&--active
+				#{$this}__line
+					margin: 0
+					&:nth-child(1)
+						position: absolute
+						top: 50%
+						left: 0
+
+						transform: rotate(-45deg)
+					&:nth-child(2)
+						opacity: 0
+					&:nth-child(3)
+						top: 50%
+						left: 0
+						transform: rotate(45deg)

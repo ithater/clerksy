@@ -5,6 +5,14 @@ body
 .container
 	margin: auto
 	max-width: 1180px
+	@include maxQ(1220px)
+		max-width: 960px
+	@include maxQ(980px)
+		max-width: 740px
+	@include maxQ(760px)
+		max-width: 576px
+	@include maxQ(590px)
+		max-width: 290px / 320px * 100%
 
 h1,
 h2,
@@ -25,7 +33,6 @@ button
 	line-height: 19px
 	text-align: right
 	color: #198C36
-
 	text-decoration: none
 
 	&--light
