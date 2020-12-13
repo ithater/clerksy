@@ -1,4 +1,6 @@
 import 'normalize.css';
 import './index.sass';
 
-console.log(10);
+
+import 'loading-attribute-polyfill';
+
