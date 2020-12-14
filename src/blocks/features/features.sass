@@ -1,0 +1,17 @@
+.features
+	padding-top: 120px
+
+
+@include maxQ(980px)
+	.features
+		&__feature
+			&:not(:last-child)
+				margin-bottom: 65px	
+@include maxQ(590px)
+	.features
+		.feature
+			&__background-image
+				width: 68%
+				height: auto
+				&--girl
+					order: 1
