@@ -1,0 +1,53 @@
+.feature
+	display: flex
+	justify-content: space-between
+	align-items: center
+	padding: 0 98px
+	&__holder
+		max-width: 385px
+	&__title
+		margin-bottom: 27px
+	&__background-image
+		width: 492px
+		height: auto
+
+@include maxQ(1220px)
+	.feature
+		padding: 0
+		&__background-image
+			width: 400px
+			height: auto
+
+@include maxQ(980px)
+	.feature
+		&__background-image
+			width: 300px
+			height: auto
+
+@include maxQ(760px)
+	.feature
+		&__holder
+			max-width: 320px
+		&__title
+			font-size: 44px
+		&__text
+			font-size: 16px
+		&__background-image
+			width: 200px
+			height: auto
+
+@include maxQ(590px)
+	.feature
+		flex-direction: column
+		&__holder
+			margin-bottom: 35px
+		&__title
+			text-align: center
+			font-size: 36px
+			line-height: 48px
+		&__text,
+			text-align: center
+		&__background-image
+			width: 64%
+			height: auto
+			order: 1
