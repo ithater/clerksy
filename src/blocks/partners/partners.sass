@@ -1,0 +1,38 @@
+.partners
+	padding-top: 113px
+	padding-bottom: 120px
+	&__title
+		margin-bottom: 66px
+		text-align: center
+	&__list
+		display: flex
+		align-items: center
+		justify-content: space-between
+		padding: 0 142px
+	&__partner-image
+		width: 110px
+		height: auto
+
+@include maxQ(1220px)
+	.partners
+		&__list
+			padding: 0 120px
+@include maxQ(980px)
+	.partners
+		&__list
+			padding: 0
+
+@include maxQ(760px)
+	.partners
+		&__title
+			margin-bottom: 48px
+		&__list
+			flex-wrap: wrap
+			justify-content: center
+		&__partner
+			margin: 20px
+@include maxQ(450px)
+	.partners
+		padding-bottom: 80px
+		&__partner
+			margin: 15px
