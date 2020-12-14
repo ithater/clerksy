@@ -1,0 +1,39 @@
+.advantages
+	padding: 66px 0 120px
+	background: $green-bg
+	&__title
+		margin-bottom: 67px
+		text-align: center
+	&__list
+		display: flex
+		justify-content: space-between
+	&-advantage
+		display: flex
+		flex-direction: column
+		align-items: center
+		flex-basis: 295px
+		flex-grow: 0
+		flex-shrink: 0
+		&__image
+			margin-bottom: 28px
+
+@include maxQ(1220px)
+	.advantages
+		&-advantage
+			flex-basis: 240px
+
+
+
+@include maxQ(980px)
+	.advantages
+		padding-bottom: 46px
+		&__list
+			flex-wrap: wrap
+			justify-content: center
+		&__advantage
+			margin-bottom: 30px
+		
+// @include maxQ(760px)
+// 	max-width: 576px
+// @include maxQ(590px)
+// 	max-width: 290px / 320px * 100%
