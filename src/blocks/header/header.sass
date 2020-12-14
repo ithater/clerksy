@@ -21,6 +21,7 @@
 		border-radius: 160px
 		background: $green-light-bg
 	&-burger
+		$this: &
 		position: relative
 		z-index: 10
 		display: flex
@@ -38,6 +39,19 @@
 			transition: .3s
 			&:not(:last-child)
 				margin-bottom: 8px
+		&--active
+			#{$this}__line
+				margin: 0
+				&:nth-child(1)
+					position: absolute
+					top: 50%
+					left: 0
+					transform: rotate(-45deg)
+				&:nth-child(2)
+					opacity: 0
+				&:nth-child(3)
+					transform: rotate(45deg)
+
 		&--desktop--hidden
 			display: none
 
@@ -47,16 +61,19 @@
 			margin-right: 0
 		&__menu
 			position: absolute
+			width: 100%
 			z-index: -5
 			top: 100%
 			right: 0
 			flex-direction: column
 			padding: 10px
-			background: $green-bg
-			transition: .6s
+			background: #010201
+			transition: .8s
 			transform: translateY(-100%)
 			&--active
+				z-index: 10
 				transform: translateY(-0%)
+
 
 		&__login
 			margin-right: 0
@@ -68,21 +85,5 @@
 			margin: 0
 
 		&-burger
-			$this: &
 			&--desktop--hidden
 				display: flex
-			&--active
-				#{$this}__line
-					margin: 0
-					&:nth-child(1)
-						position: absolute
-						top: 50%
-						left: 0
-
-						transform: rotate(-45deg)
-					&:nth-child(2)
-						opacity: 0
-					&:nth-child(3)
-						top: 50%
-						left: 0
-						transform: rotate(45deg)
