@@ -1,0 +1,85 @@
+.motto
+	position: relative
+	z-index: -10
+	background: $green-bg
+	padding: 120px 0 130px
+	overflow: hidden
+	&__container
+		position: relative
+		display: flex
+	&__holder
+		max-width: 475px
+	&__title
+		max-width: 391px
+		margin-bottom: 18px
+	&__background-image
+		position: absolute
+		right: -50px
+		bottom: -240px
+		+box(738px, 690px)
+
+@include maxQ(1300px)
+	.motto
+		&__background-image
+			right: 0px
+			bottom: -180px
+			+box(600px, auto)
+
+@include maxQ(1220px)
+	.motto
+		&__background-image
+			right: -60px
+			bottom: -100px
+			+box(550px, auto)
+
+@include maxQ(980px)
+	.motto
+		&__container
+			max-width: 780px
+		&__text
+			max-width: 400px
+		&__background-image
+			right: 0px
+			bottom: 0px
+			+box(356px, auto)
+
+@include maxQ(860px)
+	.motto
+		&__container
+			max-width: 750px
+		&__text
+			max-width: 400px
+		&__background-image
+			right: 0px
+			bottom: 0px
+			+box(356px, auto)
+
+@include maxQ(760px)
+	.motto
+		padding-top: 60px
+		padding-bottom: 60px
+		&__container
+			max-width: 576px
+			flex-direction: column
+		&__background-image
+			z-index: -110
+			right: -175px
+			bottom: -62px
+			+box(356px, auto)
+
+@include maxQ(590px)
+	.motto
+		&::before
+			content: ''
+			background-color: rgba(22, 58, 36, 0.75)
+			z-index: -5
+			+absolute-full
+		&__holder
+			max-width: 300px
+		&__background-image
+			z-index: -110
+			right: 0px
+			bottom: -62px
+			+box(320px, auto)
+		&__container
+			max-width: 290px / 320px * 100%
