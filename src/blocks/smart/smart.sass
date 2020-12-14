@@ -1,0 +1,30 @@
+.smart
+	padding: 120px 0
+	background: #F2EFE6
+	&__container
+		display: flex
+		flex-direction: column
+		align-items: center
+	&__holder
+		max-width: 786px
+	&__title
+		margin-bottom: 27px
+		text-align: center
+	&__text
+		text-align: center
+	&__background-image
+		+box(100%, auto)
+
+@include maxQ(1220px)
+	.smart
+		&__holder
+			margin-bottom: 20px
+
+@include maxQ(590px)
+	.smart
+		padding: 80px 0
+		&__title
+			font-size: 44px
+			line-height: 50px
+		&__text
+			font-size: 16px
