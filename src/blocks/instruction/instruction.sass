@@ -1,0 +1,105 @@
+.instruction
+	padding: 120px 0
+	background: #F2EFE6
+	&__container
+		display: flex
+		flex-direction: column
+		align-items: center
+	&__title
+		margin-bottom: 20px
+		text-align: center
+	&__text
+		text-align: center
+		margin-bottom: 18px
+	&__list
+		display: flex
+		align-items: center
+		flex-wrap: wrap
+
+	&__item
+		$this: &
+		display: flex
+		flex-direction: column
+		align-items: center
+		width: 393px
+		padding: 19px 131px 22px 0
+		&-text
+			text-align: center
+			margin-bottom: 13px
+		&-title
+			text-align: center
+		&:nth-child(1),
+		&:nth-child(2)
+			position: relative
+			&:before
+				content: ''
+				position: absolute
+				+box(75px, 36px)
+				top: 50%
+				right: 28px
+				transform: translateY(-50%)
+				background: url('./assets/image/arrow__img.svg') center no-repeat
+		&:nth-child(2)
+			&:before
+				transform: translateY(-50%) rotateX(180deg)
+		&:nth-child(3)
+			width: 290px
+			margin-left: 51px
+			padding: 38px 36px 43px 30px
+			background: url('./assets/image/line__around__img.svg') top left / 100% 100% no-repeat
+			#{$this}-text
+				margin-bottom: 30px
+
+@include maxQ(1220px)
+	.instruction
+		&__item
+			width: 320px
+			&:nth-child(1),
+			&:nth-child(2)
+				padding-right: 90px
+				&:before
+					right: 10px
+			&:nth-child(3)
+				width: 290px
+				margin-left: 30px
+
+@include maxQ(980px)
+	.instruction
+		&__list
+			flex-direction: column
+			align-items: flex-start
+			width: 80%
+		&__item
+			&:nth-child(1),
+			&:nth-child(2)
+				&:before
+					transform: rotate(69deg)
+			&:nth-child(2)
+				align-self: center
+			&:nth-child(3)
+				align-self: flex-end
+
+	
+
+@include maxQ(590px)
+	.instruction
+		padding-top: 80px
+		padding-bottom: 80px
+		&__list
+			flex-direction: column
+			align-items: flex-start
+			width: 100%
+		&__item
+			width: 100%
+			max-width: 280px
+			padding-bottom: 90px
+			&:nth-child(1),
+			&:nth-child(2)
+				padding-right: 0
+				&:before
+					bottom: 30px
+					top: unset
+					transform: rotate(78deg)
+			&:nth-child(3)
+				margin: 0
+
