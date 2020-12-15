@@ -50,6 +50,24 @@
 			#{$this}-text
 				margin-bottom: 30px
 
+	&__book-button
+		padding: 15px 25px
+
+		font-size: 16px
+		line-height: 22px
+
+		text-align: center
+
+		color: #FBFAF7
+
+		background: #198C36
+		border-radius: 160px
+		border: none
+		outline: none
+
+		&:focus
+			box-shadow: 0 0 0 2px #265f34
+
 @include maxQ(1220px)
 	.instruction
 		&__item
@@ -78,8 +96,9 @@
 				align-self: center
 			&:nth-child(3)
 				align-self: flex-end
-
-	
+		&__book-button
+			margin-top: 15px
+			width: 50%
 
 @include maxQ(590px)
 	.instruction
@@ -102,4 +121,6 @@
 					transform: rotate(78deg)
 			&:nth-child(3)
 				margin: 0
-
+		&__book-button
+			margin-top: 15px
+			width: auto
