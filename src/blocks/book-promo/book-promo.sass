@@ -1,0 +1,77 @@
+.book-promo
+	padding-top: 130px
+	padding-bottom: 135px
+	&__container
+		padding: 0 98px
+		display: flex
+		align-items: center
+		justify-content: space-between
+	&__holder
+		max-width: 393px
+	&__title
+		margin-bottom: 25px
+	&__text
+		display: inline-block
+		margin-bottom: 19px
+	&__preview
+		position: relative
+		width: 492px
+		height: 510px
+	&__book-background
+		position: absolute
+		z-index: -1
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		+box(100%, auto)
+	&__book-image
+		position: absolute
+		z-index: 1
+		top: 8%
+		left: 17%
+		+box(64%, auto)
+
+@include maxQ(1220px)
+	.book-promo
+		&__container
+			padding: 0
+
+@include maxQ(980px)
+	.book-promo
+		&__preview
+			position: relative
+			width: 347px
+			height: 362px
+
+@include maxQ(760px)
+	.book-promo
+		padding: 80px 0
+		&__holder
+			max-width: 300px
+		&__preview
+			+box(250px)
+		&__title
+			font-size: 36px
+			line-height: 48px
+
+@include maxQ(590px)
+	.book-promo
+		&__container
+			flex-direction: column
+			align-items: center
+		&__holder
+			display: flex
+			flex-direction: column
+			align-items: center
+			margin-bottom: 20px
+		&__text,
+		&__title
+			text-align: center
+		&__preview
+			+box(300px)
+
+@include maxQ(400px)
+	.book-promo
+		&__preview
+			+box(250px)
