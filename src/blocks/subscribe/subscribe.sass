@@ -1,0 +1,77 @@
+.subscribe
+	padding: 60px 0
+	background-color: #F2EFE6
+	&__container
+		display: flex
+		justify-content: space-between
+		align-items: center
+	&__title
+		margin-bottom: 26px
+	&-form
+		max-width: 590px
+		width: 100%
+		&__holder
+			position: relative
+			margin-bottom: 11px
+		&__input
+			height: 100%
+			width: 100%
+			padding-right: 120px
+			padding-left: 20px
+			background: #FFFFFF
+			border: 1px solid #F2EFE6
+			box-sizing: border-box
+			border-radius: 255px
+			transition: .3s
+			outline: none
+
+			&:focus
+				border-color: #a19f98
+
+		&__button
+			position: absolute
+			top: 0
+			right: 0
+			height: 100%
+		&__input-holder
+			height: 54px
+		&__text
+			max-width: 524px
+			font-size: 14px
+			line-height: 21px
+		&__link
+			font-size: 14px
+			line-height: 21px
+			margin-left: 12px
+
+@include maxQ(1220px)
+	.subscribe
+		&-form
+			max-width: 500px
+			&__text
+				max-width: 480px
+				font-size: 14px
+				line-height: 21px
+			&__link
+				font-size: 14px
+				line-height: 21px
+			
+@include maxQ(980px)
+	.subscribe
+		&__container
+			flex-direction: column
+		&__holder
+			margin-bottom: 30px
+		&__title,
+		&__text
+			text-align: center
+		&-form
+			max-width: 500px
+			&__text
+				max-width: 480px
+
+@include maxQ(590px)
+	.subscribe
+		&-form
+			&__input
+				font-size: 14px
