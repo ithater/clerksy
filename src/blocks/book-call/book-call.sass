@@ -1,0 +1,57 @@
+.book-call
+	position: relative
+	padding: 114px 0 124px
+
+	// background: url('./assets/image/book__call__left__bg__img.svg') left bottom / 300px 400px no-repeat,
+	// url('./assets/image/book__call__right__bg__img.svg') right bottom / 300px 400px no-repeat
+	background-color: $green-bg
+	&::before,
+	&::after
+		content: ''
+		position: absolute
+		display: block
+		+box(300px, 400px)
+		bottom: 0
+
+		background-size: 100% 100%
+		background-repeat: no-repeat
+
+	&::after
+		background-image: url('./assets/image/book__call__right__bg__img.svg')
+		right: 0
+	&::before
+		background-image: url('./assets/image/book__call__left__bg__img.svg')
+		left: 0
+	
+		
+		
+	&__container
+		position: relative
+		z-index: 5
+		display: flex
+		flex-direction: column
+		align-items: center
+	&__title
+		margin-bottom: 26px
+		text-align: center
+	&__text
+		margin-bottom: 18px
+		text-align: center
+
+@include maxQ(980px)
+	.book-call
+		&::before,
+		&::after
+			+box(190px, 253px)
+
+@include maxQ(590px)
+	.book-call
+		padding: 195px 0 150px
+		&::before,
+		&::after
+			+box(150px, 200px)
+
+		&::before
+			top: 0
+			left: 0
+			transform: rotateX(180deg) 
