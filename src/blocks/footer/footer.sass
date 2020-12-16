@@ -1,0 +1,67 @@
+.footer
+	padding-top: 20px
+	&__holder
+		display: flex
+		justify-content: space-between
+		align-items: center
+		&:nth-child(1)
+			padding: 21px 0
+			margin-bottom: 19px
+		&:nth-child(2)
+			padding: 25px 0
+			border-top: 1px solid #F2EFE6
+
+	&__title
+		margin-left: auto
+		margin-right: 311px
+		font-size: 24px
+		line-height: 36px
+		text-align: center
+
+	&__nav
+		display: flex
+		align-items: center
+	&__link
+		&:not(:last-child)
+			margin-right: 14px
+	&__copyright
+		font-size: 14px
+		line-height: 21px
+
+@include maxQ(980px)
+	.footer
+		&__title
+			margin: 0
+		&__copyright
+			max-width: 250px
+
+@include maxQ(760px)
+	.footer
+		&__holder
+			&:nth-child(2)
+				flex-direction: column
+		&__copyright
+			margin-top: 20px
+			order: 1
+			max-width: 100%
+			text-align: center
+
+@include maxQ(590px)
+	.footer
+		&__holder
+			&:nth-child(1)
+				flex-direction: column
+				.footer
+					&__nav
+						margin-top: 15px
+
+			&:nth-child(2)
+				.footer
+					&__nav
+						justify-content: center
+						flex-wrap: wrap
+					&__link
+						padding: 5px
+						margin: 5px
+						&:not(:last-child)
+							margin: 0
